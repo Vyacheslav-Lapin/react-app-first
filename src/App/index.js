@@ -1,4 +1,5 @@
 import React from 'react';
+import LifeCicleMountExample from "../LifeCicleMountExample";
 import Card from "../Card";
 import List2 from "../List2";
 import EventsExample from "../EventsExample";
@@ -11,7 +12,13 @@ import './App.css';
 export default function App() {
     // List2.name = "List2"; //not working, but...
     Object.defineProperty(List2, "name", {value: "List2"}); // it works! :)
+
+    // const interval = setInterval(() => console.log(5), 0);
+    // const timeout = setTimeout(() => clearInterval(interval), 0);
+    // clearTimeout(timeout);
+
     return [
+        <LifeCicleMountExample/>,
         <Card>
             <Card.Body>
                 <Card.Title>What is love?</Card.Title>
