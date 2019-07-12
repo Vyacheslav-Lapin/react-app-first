@@ -1,4 +1,5 @@
 import React from 'react';
+import ReduxExample2 from "../ReduxExample2";
 import ReduxExample1 from "../ReduxExample1";
 import LifeCicleMountExample from "../LifeCicleMountExample";
 import Card from "../Card";
@@ -19,6 +20,7 @@ export default function App() {
     // clearTimeout(timeout);
 
     return [
+        <ReduxExample2/>,
         <ReduxExample1/>,
         <LifeCicleMountExample/>,
         <Card>
