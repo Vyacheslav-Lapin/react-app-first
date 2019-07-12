@@ -11,7 +11,8 @@ const reducer = (state = 0, action) => {
         return state;
     }
 };
-const store = createStore(reducer);
+const reduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__;
+const store = createStore(reducer, reduxDevtools && reduxDevtools());
 
 // Функция `subscribe` является частью реализации паттерна Observer
 // Каждый ее вызов, добавляет в список наблюдателей новую функцию
@@ -24,7 +25,8 @@ export default function ReduxExample1(props) {
     const incrementAction = {type: 'INCREMENT'};
     store.dispatch(incrementAction);// => 1
     store.dispatch(incrementAction);// => 2
-    const decrementAction = { type: 'DECREMENT' };
+    const decrementAction = {type: 'DECREMENT'};
     store.dispatch(decrementAction);// => 1
     return <div>123</div>;
 }
+
